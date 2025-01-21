@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project CORTANA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .chatbot-container {
+            width: 300px;
+            height: 500px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-header {
+            background-color: #080252;
+            color: white;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+        }
+        .chat-messages {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            border-bottom: 1px solid #ccc;
+        }
+        .message {
+            margin-bottom: 10px;
+        }
+        .bot-message {
+            background-color: #f1f1f1;
+            padding: 8px;
+            border-radius: 5px;
+            max-width: 80%;
+        }
+        .user-message {
+            background-color: #13024b;
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+            max-width: 80%;
+            align-self: flex-end;
+        }
+        .chat-input-container {
+            display: flex;
+            padding: 10px;
+        }
+        .chat-input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .send-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 10px;
+            margin-left: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .send-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbot-container">
+        <div class="chat-header">CORTANA</div>
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type a message...">
+            <button class="send-button" id="send-button">Send</button>
+        </div>
+    </div>
+    <script src="bot.js"></script>
+</body>
+</html>
